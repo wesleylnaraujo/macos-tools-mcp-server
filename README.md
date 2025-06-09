@@ -1,6 +1,6 @@
 # macOS Tools MCP Server
 
-A comprehensive MCP (Model Context Protocol) server for macOS that provides advanced system monitoring and file search capabilities.
+A MCP server for macOS that provides advanced system monitoring and file search capabilities.
 
 ## Table of Contents
 
@@ -31,13 +31,13 @@ A comprehensive MCP (Model Context Protocol) server for macOS that provides adva
 
 ## Features
 
-### 🖥️ System Performance Monitor
+### System Performance Monitor
 - **Real-time Monitoring**: Track CPU, memory, disk I/O, and network statistics
 - **Process Analysis**: View top resource-consuming processes with detailed metrics
 - **Historical Tracking**: Store and analyze performance data over time using SQLite
 - **Optimization Suggestions**: Get intelligent recommendations to improve system performance
 
-### 🔍 Enhanced File Search
+### Enhanced File Search
 - **Deep Content Search**: Search within file contents using regex or plain text
 - **Spotlight Integration**: Leverage macOS Spotlight for fast metadata searches
 - **Tag Management**: Create, search, and manage custom file tags using extended attributes
@@ -174,26 +174,22 @@ Monitor and analyze system performance metrics.
 **Examples:**
 
 ```typescript
-// Get current system metrics
 await callTool("system_performance", {
   action: "current",
   metric: "all"
 });
 
-// View performance history
 await callTool("system_performance", {
   action: "history",
   timeRange: "24h",
   metric: "memory"
 });
 
-// List top processes by CPU usage
 await callTool("system_performance", {
   action: "processes",
   metric: "cpu"
 });
 
-// Get optimization suggestions
 await callTool("system_performance", {
   action: "optimize"
 });
@@ -224,14 +220,12 @@ await callTool("enhanced_search", {
   path: "~/Projects"
 });
 
-// Tag important files
 await callTool("enhanced_search", {
   action: "tag",
   path: "~/Documents/important.pdf",
   tags: ["urgent", "project-x"]
 });
 
-// Search by tags
 await callTool("enhanced_search", {
   action: "search",
   searchType: "tags",
@@ -239,7 +233,6 @@ await callTool("enhanced_search", {
   path: "~/Documents"
 });
 
-// Search file contents
 await callTool("enhanced_search", {
   action: "search",
   query: "apiKey",
@@ -319,15 +312,6 @@ DEBUG=macos-tools-mcp node dist/index.js
 - File paths are validated and normalized
 - Sensitive directories can be excluded via configuration
 - Rate limiting prevents resource exhaustion
-
-## Contributing
-
-Contributions are welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
 
 ## License
 
@@ -410,6 +394,4 @@ I want to test the macOS Tools MCP server. Please help me:
 - [ ] GPU monitoring support
 - [ ] Network connection analysis
 - [ ] Application-specific performance tracking
-- [ ] Cloud backup for performance data
-- [ ] Machine learning-based optimization suggestions
 - [ ] Integration with Time Machine for file version search
