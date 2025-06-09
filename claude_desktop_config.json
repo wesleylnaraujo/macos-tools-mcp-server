@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "macos-tools": {
+      "command": "node",
+      "args": [
+        "/Users/tornikegomareli/Development/macos-tools-mcp/dist/index.js"
+      ],
+      "env": {}
+    }
+  }
+}
