@@ -17,7 +17,6 @@ A MCP server for macOS that provides advanced system monitoring and file search 
   - [Setup](#setup)
   - [Permissions](#permissions)
 - [Usage](#usage)
-  - [Starting the Server](#starting-the-server)
   - [Claude Desktop Configuration](#claude-desktop-configuration)
 - [Available Tools](#available-tools)
   - [system_performance](#system_performance)
@@ -57,37 +56,9 @@ A MCP server for macOS that provides advanced system monitoring and file search 
 
 ### Setup
 
-#### Option 1: NPM Install (Recommended)
+No installation needed! This MCP server is available via npm and will be automatically downloaded when you add it to your Claude Desktop configuration.
 
-The easiest way to use this MCP server is through npm/npx:
-
-```bash
-# No installation needed, just add to Claude Desktop config
-# See Claude Desktop Configuration section below
-```
-
-#### Option 2: From Source
-
-1. Clone the repository:
-```bash
-git clone https://github.com/tornikegomareli/macos-tools-mcp-server.git
-cd macos-tools-mcp-server
-```
-
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Build the project:
-```bash
-npm run build
-```
-
-4. Make the script executable:
-```bash
-chmod +x dist/index.js
-```
+See the [Claude Desktop Configuration](#claude-desktop-configuration) section below for setup instructions.
 
 ### Permissions
 
@@ -105,18 +76,6 @@ For full functionality, the server requires certain permissions:
 
 ## Usage
 
-### Starting the Server
-
-Run the MCP server:
-```bash
-npm start
-```
-
-Or use it directly:
-```bash
-node dist/index.js
-```
-
 ### Claude Desktop Configuration
 
 To use this MCP server with Claude Desktop:
@@ -128,7 +87,6 @@ To use this MCP server with Claude Desktop:
 
 2. Add the macOS Tools server to your configuration:
 
-#### Using NPM (Recommended)
 ```json
 {
   "mcpServers": {
@@ -143,23 +101,7 @@ To use this MCP server with Claude Desktop:
 }
 ```
 
-#### Using Local Installation
-If you cloned and built from source:
-```json
-{
-  "mcpServers": {
-    "macos-tools": {
-      "command": "node",
-      "args": [
-        "/path/to/macos-tools-mcp-server/dist/index.js"
-      ],
-      "env": {}
-    }
-  }
-}
-```
-
-4. If you already have other MCP servers configured, add the macos-tools configuration to the existing mcpServers object:
+3. If you already have other MCP servers configured, add the macos-tools configuration to the existing mcpServers object:
 
 ```json
 {
@@ -168,9 +110,9 @@ If you cloned and built from source:
       // ... existing configuration
     },
     "macos-tools": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "/Users/tornikegomareli/Development/macos-tools-mcp/dist/index.js"
+        "@tgomareli/macos-tools-mcp"
       ],
       "env": {}
     }
@@ -178,9 +120,9 @@ If you cloned and built from source:
 }
 ```
 
-5. Save the configuration file and restart Claude Desktop.
+4. Save the configuration file and restart Claude Desktop.
 
-6. You should now see the macOS Tools server available in Claude Desktop with two tools:
+5. You should now see the macOS Tools server available in Claude Desktop with two tools:
    - `system_performance` - Monitor system resources
    - `enhanced_search` - Advanced file search and tagging
 
