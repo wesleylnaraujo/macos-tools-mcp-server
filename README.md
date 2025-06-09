@@ -119,7 +119,7 @@ Or you can use [mcp-installer](https://github.com/anaisbetts/mcp-installer) for 
 
 Just type in claude 
 
-> Hey Claude, install the MCP server named macos-tools-mcp-server
+> Hey Claude, install the MCP server named macos-tools-mcp
 
 
 ## Available Tools
