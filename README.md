@@ -20,9 +20,6 @@ A MCP server for macOS that provides advanced system monitoring and file search 
   - [system_performance](#system_performance)
   - [enhanced_search](#enhanced_search)
   - [Key Features](#key-features)
-- [Common Issues](#common-issues)
-  - [Debug Mode](#debug-mode)
-- [Security Things](#security-things)
 - [License](#license)
 - [Testing the Server](#testing-the-server)
   - [Quick Test Prompts](#quick-test-prompts)
@@ -215,35 +212,6 @@ await callTool("enhanced_search", {
    - SQLite database for performance history
    - Configurable data retention
    - Efficient time-series queries
-
-## Common Issues
-
-1. **Permission Denied Errors**
-   - Ensure the terminal has Full Disk Access
-   - Some operations may require sudo (temperature monitoring)
-
-2. **Spotlight Not Finding Files**
-   - Check if Spotlight indexing is enabled
-   - Verify the search path is not excluded from Spotlight
-
-3. **High CPU Usage**
-   - Adjust cache TTL values in cache.ts
-   - Limit search depth and file types
-   - Use more specific search queries
-
-### Debug Mode
-
-Enable debug logging by setting the environment variable:
-```bash
-DEBUG=macos-tools-mcp node dist/index.js
-```
-
-## Security Things
-
-- All shell commands are properly escaped to prevent injection
-- File paths are validated and normalized
-- Sensitive directories can be excluded via configuration
-- Rate limiting prevents resource exhaustion
 
 ## License
 
