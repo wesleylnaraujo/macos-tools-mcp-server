@@ -111,6 +111,15 @@ To use this MCP server with Claude Desktop:
 5. You should now see the macOS Tools server available in Claude Desktop with two tools:
    - `system_performance` - Monitor system resources
    - `enhanced_search` - Advanced file search and tagging
+  
+## MCP Installer
+
+Or you can use [mcp-installer](https://github.com/anaisbetts/mcp-installer) for installing it directly, without opening config files.
+
+Just type in claude 
+
+> Hey Claude, install the MCP server named macos-tools-mcp-server
+
 
 ## Available Tools
 
