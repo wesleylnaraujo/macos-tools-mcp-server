@@ -1,11 +1,19 @@
 {
-  "name": "macos-tools-mcp",
+  "name": "@tgomareli/macos-tools-mcp",
   "version": "1.0.0",
   "description": "MCP server for advanced macOS system monitoring and file search capabilities",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
     "macos-tools-mcp": "./dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tornikegomareli/macos-tools-mcp-server.git"
+  },
+  "homepage": "https://github.com/tornikegomareli/macos-tools-mcp-server",
+  "bugs": {
+    "url": "https://github.com/tornikegomareli/macos-tools-mcp-server/issues"
   },
   "scripts": {
     "build": "tsc",

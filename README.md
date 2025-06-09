@@ -52,10 +52,21 @@ A MCP server for macOS that provides advanced system monitoring and file search 
 
 ### Setup
 
+#### Option 1: NPM Install (Recommended)
+
+The easiest way to use this MCP server is through npm/npx:
+
+```bash
+# No installation needed, just add to Claude Desktop config
+# See Claude Desktop Configuration section below
+```
+
+#### Option 2: From Source
+
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/macos-tools-mcp.git
-cd macos-tools-mcp
+git clone https://github.com/tornikegomareli/macos-tools-mcp-server.git
+cd macos-tools-mcp-server
 ```
 
 2. Install dependencies:
@@ -103,29 +114,23 @@ node dist/index.js
 
 ### Claude Desktop Configuration
 
-To use this MCP server with Claude Desktop, you need to add it to your Claude Desktop configuration:
+To use this MCP server with Claude Desktop:
 
-1. First, ensure the project is built:
-```bash
-cd /Users/tornikegomareli/Development/macos-tools-mcp
-npm install
-npm run build
-```
-
-2. Open your Claude Desktop configuration file:
+1. Open your Claude Desktop configuration file:
    - macOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
    - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
    - Linux: `~/.config/Claude/claude_desktop_config.json`
 
-3. Add the macOS Tools server to your configuration:
+2. Add the macOS Tools server to your configuration:
 
+#### Using NPM (Recommended)
 ```json
 {
   "mcpServers": {
     "macos-tools": {
-      "command": "node",
+      "command": "npx",
       "args": [
-        "/Users/tornikegomareli/Development/macos-tools-mcp/dist/index.js"
+        "@tgomareli/macos-tools-mcp"
       ],
       "env": {}
     }
@@ -133,7 +138,21 @@ npm run build
 }
 ```
 
-**Note**: Replace `/Users/tornikegomareli/Development/macos-tools-mcp` with the actual path where you cloned this repository.
+#### Using Local Installation
+If you cloned and built from source:
+```json
+{
+  "mcpServers": {
+    "macos-tools": {
+      "command": "node",
+      "args": [
+        "/path/to/macos-tools-mcp-server/dist/index.js"
+      ],
+      "env": {}
+    }
+  }
+}
+```
 
 4. If you already have other MCP servers configured, add the macos-tools configuration to the existing mcpServers object:
 

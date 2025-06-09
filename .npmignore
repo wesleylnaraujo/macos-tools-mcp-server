@@ -1,0 +1,35 @@
+# Source files
+src/
+tsconfig.json
+
+# Development files
+.gitignore
+.npmignore
+claude_desktop_config.json
+claude_desktop_config.example.json
+
+# Git
+.git/
+.github/
+
+# Dependencies
+node_modules/
+
+# IDE
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Test files
+*.test.ts
+*.spec.ts
+
+# Documentation source
+docs/
+
+# Development scripts
+scripts/
+
+# Keep dist directory for npm publish

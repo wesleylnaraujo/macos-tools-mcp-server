@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "macos-tools": {
+      "command": "npx",
+      "args": [
+        "@tgomareli/macos-tools-mcp"
+      ],
+      "env": {}
+    }
+  }
+}
