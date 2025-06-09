@@ -33,8 +33,6 @@ A MCP server for macOS that provides advanced system monitoring and file search 
 - [License](#license)
 - [Future Enhancements](#future-enhancements)
 
-## Features
-
 ### System Performance Monitor
 - **Real-time Monitoring**: Track CPU, memory, disk I/O, and network statistics
 - **Process Analysis**: View top resource-consuming processes with detailed metrics
@@ -49,16 +47,10 @@ A MCP server for macOS that provides advanced system monitoring and file search 
 
 ## Installation
 
-### Prerequisites
+### Requirements
 - macOS 10.15 or later
 - Node.js 18.0.0 or later
 - npm or yarn package manager
-
-### Setup
-
-No installation needed! This MCP server is available via npm and will be automatically downloaded when you add it to your Claude Desktop configuration.
-
-See the [Claude Desktop Configuration](#claude-desktop-configuration) section below for setup instructions.
 
 ### Permissions
 
@@ -66,7 +58,7 @@ For full functionality, the server requires certain permissions:
 
 1. **Full Disk Access** (recommended for file search):
    - System Preferences → Security & Privacy → Privacy → Full Disk Access
-   - Add Terminal or your IDE
+   - Add Terminal
 
 2. **Developer Tools** (for process monitoring):
    - Install Xcode Command Line Tools if not already installed:
@@ -74,7 +66,7 @@ For full functionality, the server requires certain permissions:
    xcode-select --install
    ```
 
-## Usage
+## How to install
 
 ### Claude Desktop Configuration
 
@@ -209,27 +201,6 @@ await callTool("enhanced_search", {
 });
 ```
 
-## Architecture
-
-### Project Structure
-```
-macos-tools-mcp/
-├── src/
-│   ├── index.ts              # MCP server entry point
-│   ├── tools/
-│   │   ├── performance-monitor.ts
-│   │   ├── spotlight-enhanced.ts
-│   │   └── types.ts
-│   └── utils/
-│       ├── system-info.ts    # macOS system calls
-│       ├── file-search.ts    # File search utilities
-│       └── cache.ts          # Performance caching
-├── dist/                     # Compiled JavaScript
-├── package.json
-├── tsconfig.json
-└── README.md
-```
-
 ### Key Features
 
 1. **Native macOS Integration**
@@ -248,9 +219,7 @@ macos-tools-mcp/
    - Configurable data retention
    - Efficient time-series queries
 
-## Troubleshooting
-
-### Common Issues
+## Common Issues
 
 1. **Permission Denied Errors**
    - Ensure the terminal has Full Disk Access
@@ -272,7 +241,7 @@ Enable debug logging by setting the environment variable:
 DEBUG=macos-tools-mcp node dist/index.js
 ```
 
-## Security Considerations
+## Security Things
 
 - All shell commands are properly escaped to prevent injection
 - File paths are validated and normalized
