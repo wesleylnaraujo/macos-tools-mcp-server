@@ -1,4 +1,4 @@
-# macOS Tools MCP Server
+# macOS Internal Tools MCP Server
 
 A MCP server for macOS that provides advanced system monitoring and file search capabilities.
 
