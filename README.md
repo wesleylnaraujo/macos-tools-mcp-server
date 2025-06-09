@@ -16,6 +16,7 @@ A MCP server for macOS that provides advanced system monitoring and file search 
   - [Permissions](#permissions)
 - [How to install](#how-to-install)
   - [Claude Desktop Configuration](#claude-desktop-configuration)
+  - [MCP Installer](#mcp-installer)
 - [Available Tools](#available-tools)
   - [system_performance](#system_performance)
   - [enhanced_search](#enhanced_search)
