@@ -2,6 +2,9 @@
 
 A MCP server for macOS that provides advanced system monitoring and file search capabilities.
 
+<img src="https://github.com/user-attachments/assets/45d755c8-a280-4d83-bc11-dd97eef9c662" width="400" alt="MCP Server Screenshot">
+
+
 ## Table of Contents
 
 - [Features](#features)
